@@ -11,13 +11,8 @@ const Home = () => {
     <View style={styles.container}>
       <Pressable
         style={styles.button}
-        onPress={() => navigation.navigate('ModalDemo1')}>
-          <Text>Modal Demo 1</Text>
-        </Pressable>
-      <Pressable
-        style={styles.button}
-        onPress={() => navigation.navigate('ModalDemo2')}>
-          <Text>Modal Demo 2</Text>
+        onPress={() => navigation.navigate('ModalDemo')}>
+          <Text>Modal Demo</Text>
         </Pressable>
     </View>
   )

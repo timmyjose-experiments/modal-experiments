@@ -1,26 +1,26 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import ModalDemo1 from './screens/ModalDemo1'
-import ModalDemo2 from './screens/ModalDemo2'
 import Home from './screens/Home'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import ModalDemo from './screens/ModalDemo'
 
 export type RootStackParamList = {
   Home: undefined
-  ModalDemo1: undefined
-  ModalDemo2: undefined
+  ModalDemo: undefined
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name='Home' component={Home} />
-        <Stack.Screen name='ModalDemo1' component={ModalDemo1} />
-        <Stack.Screen name='ModalDemo2' component={ModalDemo2} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name='Home' component={Home} />
+          <Stack.Screen name='ModalDemo' component={ModalDemo} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </GestureHandlerRootView>
   )
 }
 
